@@ -707,8 +707,8 @@ function debounce(fn, wait = 200) {
    ============================================================ */
 (function initScholarMetrics() {
   // ── UPDATE THESE VALUES from your Scholar profile ──
-  const CITATIONS = null; // e.g. 12  — set to a number once known
-  const H_INDEX   = null; // e.g. 2
+  const CITATIONS = 12; // e.g. 12  — set to a number once known
+  const H_INDEX   = 2; // e.g. 2
   const I10_INDEX = null; // e.g. 1
 
   function setMetric(id, value) {
