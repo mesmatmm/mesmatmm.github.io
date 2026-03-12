@@ -724,6 +724,69 @@ function debounce(fn, wait = 200) {
 })();
 
 /* ============================================================
+   16. Background Music — Broken-Inside.mp3
+   ============================================================ */
+(function initAmbientMusic() {
+  const btn   = document.getElementById('musicToggle');
+  const audio = document.getElementById('bgAudio');
+  if (!btn || !audio) return;
+
+  audio.volume = 0.4;
+
+  function updateBtn(playing) {
+    const icon = btn.querySelector('i');
+    if (playing) {
+      icon.className = 'fas fa-volume-high';
+      btn.classList.add('playing');
+      btn.setAttribute('aria-label', 'Mute background music');
+      btn.title = 'Mute music';
+    } else {
+      icon.className = 'fas fa-volume-xmark';
+      btn.classList.remove('playing');
+      btn.setAttribute('aria-label', 'Play background music');
+      btn.title = 'Play ambient music';
+    }
+  }
+
+  function tryPlay() {
+    audio.play().then(() => updateBtn(true)).catch(() => {});
+  }
+
+  /* Button click: toggle play/pause */
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      tryPlay();
+    } else {
+      audio.pause();
+      updateBtn(false);
+    }
+  });
+
+  /* Attempt autoplay on load */
+  window.addEventListener('load', () => {
+    setTimeout(tryPlay, 800);
+  });
+
+  /* Fallback: start on first non-button user interaction */
+  ['click', 'keydown', 'touchstart'].forEach((ev) => {
+    document.addEventListener(ev, function handler(e) {
+      if (btn.contains(e.target)) return;
+      if (audio.paused) tryPlay();
+      document.removeEventListener(ev, handler);
+    }, { passive: true });
+  });
+
+  /* Pause when tab hidden, resume when visible */
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      audio.pause();
+    } else if (btn.classList.contains('playing')) {
+      audio.play().catch(() => {});
+    }
+  });
+})();
+
+/* ============================================================
    DOMContentLoaded — Final Bootstrap
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
