@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mahmoud Esmat — PhD Student in Information and Systems Engineering at Concordia University, Montreal. Researcher in AI, Cryptography, Blockchain, and Quantum Computing." />
+  <meta name="keywords" content="Mahmoud Esmat, Information Systems Engineering, AI, Probabilistic Models, Machine Learning, Cryptography, Blockchain, Quantum Computing, Concordia University, PhD Researcher" />
+  <meta name="author" content="Mahmoud Esmat" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mahmoud Esmat — CS Researcher" />
+  <meta property="og:description" content="PhD Student in Information and Systems Engineering at Concordia University. Researcher in probabilistic ML, AI, Cryptography, Blockchain, and Quantum Computing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mesmatmm.github.io/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mahmoud Esmat — CS Researcher" />
+  <meta name="twitter:description" content="PhD Student in Information and Systems Engineering at Concordia University. Researcher in probabilistic ML, AI, Cryptography, and Quantum Computing." />
+
+  <title>Mahmoud Esmat | CS Researcher</title>
+  <link rel="canonical" href="https://mesmatmm.github.io/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%237B1E1E'/><text y='72' x='50' text-anchor='middle' font-size='58' font-family='serif' fill='white' font-weight='bold'>M</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS 2.3.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="container navbar-inner">
+      <!-- Logo -->
+      <a href="#hero" class="navbar-logo" aria-label="Mahmoud Esmat — Home">
+        M.Esmat
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#about"        class="nav-link" aria-label="About section">About</a></li>
+        <li><a href="#research"     class="nav-link" aria-label="Research Interests section">Research</a></li>
+        <li><a href="#education"    class="nav-link" aria-label="Education section">Education</a></li>
+        <li><a href="#publications" class="nav-link" aria-label="Publications section">Publications</a></li>
+        <li><a href="#projects"     class="nav-link" aria-label="Projects section">Projects</a></li>
+        <li><a href="#experience"   class="nav-link" aria-label="Experience section">Experience</a></li>
+        <li><a href="#skills"       class="nav-link" aria-label="Skills section">Skills</a></li>
+        <li><a href="#contact"      class="nav-link" aria-label="Contact section">Contact</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero" aria-label="Hero introduction">
+      <!-- Particle Canvas -->
+      <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero-content container">
+        <!-- Profile Image -->
+        <div class="hero-image-wrapper" data-aos="fade-right" data-aos-duration="800">
+          <div class="hero-image-ring" aria-hidden="true"></div>
+          <img
+            src="images/Personal Photo.png"
+            alt="Mahmoud Esmat — Profile Photo"
+            class="hero-image"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Hero Text -->
+        <div class="hero-text" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Mahmoud Esmat</h1>
+          <p class="hero-title">PhD Student — Information and Systems Engineering, Concordia University</p>
+
+          <!-- Typing Animation -->
+          <p class="hero-tagline" aria-live="polite">
+            Researching&nbsp;<span id="typingText" aria-label="Research area typing animation"></span><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+
+          <!-- Stats -->
+          <div class="hero-stats" role="list" aria-label="Academic statistics">
+            <div class="hero-stat" role="listitem">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Publications</span>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <span class="stat-number" id="heroStatCitations">—</span>
+              <span class="stat-label">Citations</span>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <span class="stat-number" id="heroStatHIndex">—</span>
+              <span class="stat-label">h-index</span>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <span class="stat-number">6</span>
+              <span class="stat-label">Projects</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-buttons">
+            <a
+              href="CV/CV - MEsmat.pdf"
+              download
+              class="btn btn-primary"
+              aria-label="Download Mahmoud Esmat's CV"
+            >
+              <i class="fas fa-download" aria-hidden="true"></i> Download CV
+            </a>
+            <a href="#research" class="btn btn-secondary" aria-label="View Research section">
+              <i class="fas fa-flask" aria-hidden="true"></i> View Research
+            </a>
+            <a href="#contact" class="btn btn-outline" aria-label="Go to Contact section">
+              <i class="fas fa-envelope" aria-hidden="true"></i> Contact
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title" id="about-title">About Me</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Bio Card -->
+          <div class="about-bio-card" data-aos="fade-right" data-aos-delay="100">
+            <p class="about-bio">
+              I am a <strong>PhD student</strong> in Information and Systems Engineering at <strong>Concordia University</strong>, Montreal, Canada. My doctoral research focuses on developing <strong>probabilistic models in Machine Learning</strong>, with applications spanning intelligent security systems and data-driven decision making.
+            </p>
+            <p class="about-bio">
+              My background bridges mathematics and computer science — with an MSc in Computational Sciences from Cairo University where I researched chaos-based 3D encryption and published in peer-reviewed journals. I bring together rigorous mathematical foundations and a deep interest in <strong>Cryptography</strong>, <strong>Blockchain</strong>, and <strong>Quantum Computing</strong> to build secure, intelligent systems.
+            </p>
+
+            <div class="about-details" role="list" aria-label="Personal details">
+              <div class="detail-item" role="listitem">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <span><strong>Location:</strong> Montreal, Canada</span>
+              </div>
+              <div class="detail-item" role="listitem">
+                <i class="fas fa-university" aria-hidden="true"></i>
+                <span><strong>University:</strong> Concordia University</span>
+              </div>
+              <div class="detail-item" role="listitem">
+                <i class="fas fa-user-graduate" aria-hidden="true"></i>
+                <span><strong>Position:</strong> PhD Student — ISE</span>
+              </div>
+            </div>
+
+            <!-- Social Badges -->
+            <div class="social-badges" aria-label="Social and academic profiles">
+              <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" class="social-badge badge-github" aria-label="GitHub profile">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/in/mahmoud-esmat" target="_blank" rel="noopener noreferrer" class="social-badge badge-linkedin" aria-label="LinkedIn profile">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+              </a>
+              <a href="https://scholar.google.com/citations?user=PDm7niMAAAAJ" target="_blank" rel="noopener noreferrer" class="social-badge badge-scholar" aria-label="Google Scholar profile">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i> Scholar
+              </a>
+              <a href="https://orcid.org/0009-0008-9087-0566" target="_blank" rel="noopener noreferrer" class="social-badge badge-orcid" aria-label="ORCID profile">
+                <i class="fab fa-orcid" aria-hidden="true"></i> ORCID
+              </a>
+            </div>
+          </div>
+
+          <!-- Scholar Metrics Card -->
+          <div class="scholar-card" data-aos="fade-left" data-aos-delay="200" aria-label="Google Scholar metrics">
+            <div class="scholar-card-header">
+              <i class="fas fa-chart-bar" aria-hidden="true"></i>
+              <h3>Scholar Metrics</h3>
+            </div>
+            <div class="scholar-metrics" role="list">
+              <div class="scholar-metric" role="listitem">
+                <span class="metric-value" id="metricCitations">—</span>
+                <span class="metric-label">Citations</span>
+              </div>
+              <div class="scholar-metric" role="listitem">
+                <span class="metric-value" id="metricHIndex">—</span>
+                <span class="metric-label">h-index</span>
+              </div>
+              <div class="scholar-metric" role="listitem">
+                <span class="metric-value" id="metricI10">—</span>
+                <span class="metric-label">i10-index</span>
+              </div>
+            </div>
+            <p class="scholar-note" style="font-size:0.78rem;color:var(--text-muted);margin-bottom:0.75rem;">Live metrics · <a href="https://scholar.google.com/citations?user=PDm7niMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+            <a href="https://scholar.google.com/citations?user=PDm7niMAAAAJ" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View Google Scholar profile">
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i> View on Scholar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEARCH INTERESTS SECTION ===== -->
+    <section class="section research-section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">What I Study</span>
+          <h2 class="section-title" id="research-title">Research Interests</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="research-grid" role="list" aria-label="Research interest areas">
+
+          <!-- Card 1: AI -->
+          <article class="research-card" data-tilt role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="research-card-icon" aria-hidden="true">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="research-card-title">Artificial Intelligence</h3>
+            <p class="research-card-desc">Developing deep learning architectures and neural network models for security-critical applications, including intrusion detection, anomaly recognition, and adversarial robustness.</p>
+            <div class="research-tags" aria-label="Related topics">
+              <span class="research-tag">Deep Learning</span>
+              <span class="research-tag">Neural Architectures</span>
+              <span class="research-tag">Adversarial ML</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Cryptography -->
+          <article class="research-card" data-tilt role="listitem" data-aos="fade-up" data-aos-delay="80">
+            <div class="research-card-icon" aria-hidden="true">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3 class="research-card-title">Cryptography</h3>
+            <p class="research-card-desc">Designing chaos-based and post-quantum encryption schemes with strong security guarantees. Exploring lattice-based and isogeny-based cryptographic primitives for the quantum era.</p>
+            <div class="research-tags" aria-label="Related topics">
+              <span class="research-tag">Chaos-based</span>
+              <span class="research-tag">Post-Quantum</span>
+              <span class="research-tag">Encryption</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Information Security -->
+          <article class="research-card" data-tilt role="listitem" data-aos="fade-up" data-aos-delay="160">
+            <div class="research-card-icon" aria-hidden="true">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="research-card-title">Information Security</h3>
+            <p class="research-card-desc">Building intelligent intrusion detection systems (IDS) and network security frameworks that leverage machine learning to detect and mitigate sophisticated cyber threats in real time.</p>
+            <div class="research-tags" aria-label="Related topics">
+              <span class="research-tag">IDS</span>
+              <span class="research-tag">Network Security</span>
+              <span class="research-tag">Threat Detection</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Blockchain -->
+          <article class="research-card" data-tilt role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="research-card-icon" aria-hidden="true">
+              <i class="fas fa-link"></i>
+            </div>
+            <h3 class="research-card-title">Blockchain Technology</h3>
+            <p class="research-card-desc">Researching decentralized systems, smart contract security, and quantum-resistant consensus mechanisms. Exploring privacy-preserving blockchain solutions for healthcare and IoT.</p>
+            <div class="research-tags" aria-label="Related topics">
+              <span class="research-tag">Smart Contracts</span>
+              <span class="research-tag">Consensus</span>
+              <span class="research-tag">Decentralization</span>
+            </div>
+          </article>
+
+          <!-- Card 5: Quantum Computing -->
+          <article class="research-card" data-tilt role="listitem" data-aos="fade-up" data-aos-delay="80">
+            <div class="research-card-icon" aria-hidden="true">
+              <i class="fas fa-atom"></i>
+            </div>
+            <h3 class="research-card-title">Quantum Computing</h3>
+            <p class="research-card-desc">Investigating quantum algorithms and quantum key distribution (QKD) protocols. Analyzing implications of quantum supremacy for classical cryptographic systems and proposing countermeasures.</p>
+            <div class="research-tags" aria-label="Related topics">
+              <span class="research-tag">Quantum Algorithms</span>
+              <span class="research-tag">QKD</span>
+              <span class="research-tag">Quantum Supremacy</span>
+            </div>
+          </article>
+
+          <!-- Card 6: Image Encryption -->
+          <article class="research-card" data-tilt role="listitem" data-aos="fade-up" data-aos-delay="160">
+            <div class="research-card-icon" aria-hidden="true">
+              <i class="fas fa-image"></i>
+            </div>
+            <h3 class="research-card-title">Image Encryption</h3>
+            <p class="research-card-desc">Creating high-security image encryption systems using multi-dimensional chaotic maps, DNA encoding, and visual cryptography techniques for multimedia data protection.</p>
+            <div class="research-tags" aria-label="Related topics">
+              <span class="research-tag">Chaos Maps</span>
+              <span class="research-tag">Visual Cryptography</span>
+              <span class="research-tag">DNA Encoding</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="section education-section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title" id="education-title">Education</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="timeline" id="educationTimeline" aria-label="Education timeline">
+
+          <!-- PhD -->
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-card">
+              <div class="timeline-date">2024 – Present</div>
+              <h3 class="timeline-degree">PhD in Information and Systems Engineering</h3>
+              <p class="timeline-institution">
+                <i class="fas fa-university" aria-hidden="true"></i>
+                Concordia University — Montreal, Canada
+              </p>
+              <p class="timeline-desc">Doctoral research focused on developing <strong>probabilistic models in Machine Learning</strong>, with applications in intelligent and secure systems.</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Probabilistic ML</span>
+                <span class="timeline-tag">Machine Learning</span>
+                <span class="timeline-tag">Montreal, Canada</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- MSc -->
+          <div class="timeline-item timeline-item-right" data-aos="fade-left" data-aos-delay="100">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-card">
+              <div class="timeline-date">Sep 2024</div>
+              <h3 class="timeline-degree">MSc in Mathematics (Computational Sciences)</h3>
+              <p class="timeline-institution">
+                <i class="fas fa-university" aria-hidden="true"></i>
+                Cairo University — Faculty of Science, Giza, Egypt
+              </p>
+              <p class="timeline-desc">Thesis: <em>"3D Encryption Using Chaotic Maps, Latin Cubes, and Stereographic Projection"</em>. Advisor: Prof. Mahmoud H. Annaby (H-index: 23).</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">3D Encryption</span>
+                <span class="timeline-tag">Chaotic Maps</span>
+                <span class="timeline-tag">Stereographic Projection</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- BSc -->
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-card">
+              <div class="timeline-date">Sep 2009 – May 2013</div>
+              <h3 class="timeline-degree">BSc in Computer Science</h3>
+              <p class="timeline-institution">
+                <i class="fas fa-university" aria-hidden="true"></i>
+                Cairo University — Faculty of Science, Giza, Egypt
+              </p>
+              <p class="timeline-desc">GPA: 3.5/5 (Excellent — 85%). Ranked 1st out of 120 students in the Computer Science division.</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Rank 1 / 120</span>
+                <span class="timeline-tag">GPA: 3.5 / 5</span>
+                <span class="timeline-tag">Dean's Award</span>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /.timeline -->
+      </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS SECTION ===== -->
+    <section class="section publications-section" id="publications" aria-labelledby="publications-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Scholarly Work</span>
+          <h2 class="section-title" id="publications-title">Publications</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="pub-filters" role="group" aria-label="Filter publications" data-aos="fade-up" data-aos-delay="50">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="journal" aria-pressed="false">Journals</button>
+          <button class="filter-btn" data-filter="submitted" aria-pressed="false">Under Review</button>
+          <button class="filter-btn" data-filter="2024" aria-pressed="false">2024</button>
+        </div>
+
+        <!-- Publication Cards -->
+        <div class="publications-list" id="publicationsList" aria-label="Publications list">
+
+          <!-- Publication 1 -->
+          <article
+            class="pub-card"
+            data-type="journal"
+            data-year="2024"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="pub-number" aria-hidden="true">01</div>
+            <div class="pub-content">
+              <div class="pub-badges" aria-label="Publication badges">
+                <span class="pub-badge badge-journal">Journal</span>
+                <span class="pub-badge badge-conf">Multimedia Systems</span>
+              </div>
+              <h3 class="pub-title">
+                <a href="https://doi.org/10.1007/s00530-024-01347-3" target="_blank" rel="noopener noreferrer">
+                  2D Representations of 3D Point Clouds Via the Stereographic Projection with Encryption Applications
+                </a>
+              </h3>
+              <p class="pub-authors">
+                Mahmoud H. Annaby, <strong>Mahmoud E. Mahmoud</strong>, Hosny A. Abdusalam, Hassan A. Ayad, Muhammad A. Rushdi
+              </p>
+              <p class="pub-venue">
+                <i class="fas fa-book" aria-hidden="true"></i>
+                <em>Multimedia Systems</em>, Vol. 30, 173, 2024
+              </p>
+              <div class="pub-actions" role="group" aria-label="Publication actions">
+                <a href="https://doi.org/10.1007/s00530-024-01347-3" class="pub-action-btn" target="_blank" rel="noopener noreferrer" aria-label="View DOI"><i class="fas fa-external-link-alt" aria-hidden="true"></i> DOI</a>
+                <button
+                  class="pub-action-btn bibtex-btn"
+                  aria-label="Show BibTeX citation"
+                  data-bibtex="@article{annaby2024stereographic,
+  title     = {2D Representations of 3D Point Clouds Via the Stereographic Projection with Encryption Applications},
+  author    = {Annaby, Mahmoud H. and Mahmoud, Mahmoud E. and Abdusalam, Hosny A. and Ayad, Hassan A. and Rushdi, Muhammad A.},
+  journal   = {Multimedia Systems},
+  volume    = {30},
+  pages     = {173},
+  year      = {2024},
+  publisher = {Springer},
+  doi       = {10.1007/s00530-024-01347-3}
+}"
+                >
+                  <i class="fas fa-quote-right" aria-hidden="true"></i> BibTeX
+                </button>
+                <a href="https://scholar.google.com/scholar?q=2D+Representations+3D+Point+Clouds+Stereographic+Projection+Encryption" class="pub-action-btn" target="_blank" rel="noopener noreferrer" aria-label="View on Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Scholar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 2 -->
+          <article
+            class="pub-card"
+            data-type="journal"
+            data-year="2024"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <div class="pub-number" aria-hidden="true">02</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="pub-badge badge-journal">Journal</span>
+                <span class="pub-badge badge-conf">Optik</span>
+              </div>
+              <h3 class="pub-title">
+                <a href="https://doi.org/10.1016/j.ijleo.2024.171680" target="_blank" rel="noopener noreferrer">
+                  On 3D Encryption Schemes Based on Chaotic Permutations and Rotations with Geometric Stability
+                </a>
+              </h3>
+              <p class="pub-authors">
+                Mahmoud H. Annaby, <strong>Mahmoud E. Mahmoud</strong>, Hosny A. Abdusalam, Hassan A. Ayad, Muhammad A. Rushdi
+              </p>
+              <p class="pub-venue">
+                <i class="fas fa-book" aria-hidden="true"></i>
+                <em>Optik</em>, Vol. 300, 171680, 2024
+              </p>
+              <div class="pub-actions" role="group" aria-label="Publication actions">
+                <a href="https://doi.org/10.1016/j.ijleo.2024.171680" class="pub-action-btn" target="_blank" rel="noopener noreferrer" aria-label="View DOI"><i class="fas fa-external-link-alt" aria-hidden="true"></i> DOI</a>
+                <button
+                  class="pub-action-btn bibtex-btn"
+                  aria-label="Show BibTeX citation"
+                  data-bibtex="@article{annaby2024chaotic,
+  title     = {On 3D Encryption Schemes Based on Chaotic Permutations and Rotations with Geometric Stability},
+  author    = {Annaby, Mahmoud H. and Mahmoud, Mahmoud E. and Abdusalam, Hosny A. and Ayad, Hassan A. and Rushdi, Muhammad A.},
+  journal   = {Optik},
+  volume    = {300},
+  pages     = {171680},
+  year      = {2024},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.ijleo.2024.171680}
+}"
+                >
+                  <i class="fas fa-quote-right" aria-hidden="true"></i> BibTeX
+                </button>
+                <a href="https://scholar.google.com/scholar?q=3D+Encryption+Schemes+Chaotic+Permutations+Rotations+Geometric+Stability" class="pub-action-btn" target="_blank" rel="noopener noreferrer" aria-label="View on Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Scholar</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Publication 3 -->
+          <article
+            class="pub-card"
+            data-type="submitted"
+            data-year="2024"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            <div class="pub-number" aria-hidden="true">03</div>
+            <div class="pub-content">
+              <div class="pub-badges">
+                <span class="pub-badge badge-workshop">Under Review</span>
+              </div>
+              <h3 class="pub-title">
+                <span>Geometric Stability Estimates For 3D-Object Encryption Through Permutations and Rotations</span>
+              </h3>
+              <p class="pub-authors">
+                Mahmoud H. Annaby, <strong>Mahmoud E. Mahmoud</strong>, Hosny A. Abdusalam, Hassan A. Ayad, Muhammad A. Rushdi
+              </p>
+              <p class="pub-venue">
+                <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+                <em>Submitted</em>, 2024
+              </p>
+              <div class="pub-actions" role="group" aria-label="Publication actions">
+                <button
+                  class="pub-action-btn bibtex-btn"
+                  aria-label="Show BibTeX citation"
+                  data-bibtex="@article{annaby2024geometric,
+  title  = {Geometric Stability Estimates For 3D-Object Encryption Through Permutations and Rotations},
+  author = {Annaby, Mahmoud H. and Mahmoud, Mahmoud E. and Abdusalam, Hosny A. and Ayad, Hassan A. and Rushdi, Muhammad A.},
+  year   = {2024},
+  note   = {Submitted}
+}"
+                >
+                  <i class="fas fa-quote-right" aria-hidden="true"></i> BibTeX
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.publications-list -->
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">What I Build</span>
+          <h2 class="section-title" id="projects-title">Projects</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="projects-grid" role="list" aria-label="Research and development projects">
+
+          <!-- Project 1: QuantumCrypt Suite -->
+          <article class="project-card" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true"><i class="fas fa-atom"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="QuantumCrypt Suite GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="QuantumCrypt Suite Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">QuantumCrypt Suite</h3>
+            <p class="project-desc">A comprehensive post-quantum cryptographic toolkit implementing NIST PQC finalists including CRYSTALS-Kyber and CRYSTALS-Dilithium. Benchmarks and compares performance across multiple platforms.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Post-Quantum</span>
+              <span class="project-tag">Lattice-Based</span>
+              <span class="project-tag">NIST PQC</span>
+            </div>
+          </article>
+
+          <!-- Project 2: AI-SecureNet IDS -->
+          <article class="project-card" role="listitem" data-aos="fade-up" data-aos-delay="80">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="AI-SecureNet IDS GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="AI-SecureNet IDS Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">AI-SecureNet IDS</h3>
+            <p class="project-desc">A transformer-based intrusion detection system achieving 99.2% accuracy on the CIC-IDS-2018 benchmark. Features real-time packet analysis and explainable AI dashboards for security analysts.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">PyTorch</span>
+              <span class="project-tag">Transformers</span>
+              <span class="project-tag">Network Security</span>
+            </div>
+          </article>
+
+          <!-- Project 3: ChaosEncrypt -->
+          <article class="project-card" role="listitem" data-aos="fade-up" data-aos-delay="160">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true"><i class="fas fa-image"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="ChaosEncrypt GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="ChaosEncrypt Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">ChaosEncrypt</h3>
+            <p class="project-desc">An image encryption system using the novel 3D fractional-order chaotic map developed in our MSc thesis. Passes all NIST randomness tests and achieves near-perfect entropy of 7.999 bits/pixel.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">MATLAB</span>
+              <span class="project-tag">Chaos Theory</span>
+              <span class="project-tag">Image Processing</span>
+            </div>
+          </article>
+
+          <!-- Project 4: SecureChain Health -->
+          <article class="project-card" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true"><i class="fas fa-link"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="SecureChain Health GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="SecureChain Health Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">SecureChain Health</h3>
+            <p class="project-desc">A privacy-preserving blockchain platform for healthcare data management integrating homomorphic encryption. Enables computation on encrypted patient records without exposing sensitive information.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="project-tag">Solidity</span>
+              <span class="project-tag">Ethereum</span>
+              <span class="project-tag">Web3.js</span>
+              <span class="project-tag">Homomorphic Enc.</span>
+            </div>
+          </article>
+
+          <!-- Project 5: SteganoAI -->
+          <article class="project-card" role="listitem" data-aos="fade-up" data-aos-delay="80">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true"><i class="fas fa-eye"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="SteganoAI GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="SteganoAI Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">SteganoAI</h3>
+            <p class="project-desc">Deep learning steganography system using adversarial GANs to hide information in images with imperceptible visual distortion. Outperforms classical LSB methods by 12dB in PSNR metrics.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">GAN</span>
+              <span class="project-tag">Steganography</span>
+            </div>
+          </article>
+
+          <!-- Project 6: FedSecure -->
+          <article class="project-card" role="listitem" data-aos="fade-up" data-aos-delay="160">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true"><i class="fas fa-network-wired"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="FedSecure GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="FedSecure Demo"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">FedSecure</h3>
+            <p class="project-desc">A federated learning framework with differential privacy guarantees for training intrusion detection models across distributed networks without sharing raw data. Achieves strong ε-differential privacy.</p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Federated Learning</span>
+              <span class="project-tag">Differential Privacy</span>
+              <span class="project-tag">PyTorch</span>
+            </div>
+          </article>
+
+        </div><!-- /.projects-grid -->
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Work History</span>
+          <h2 class="section-title" id="experience-title">Experience</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="exp-timeline" id="expTimeline" aria-label="Experience timeline">
+
+          <!-- Experience 1 -->
+          <div class="exp-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <article class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-title">Assistant Lecturer</h3>
+                  <p class="exp-org">
+                    <i class="fas fa-university" aria-hidden="true"></i>
+                    Faculty of Science, Cairo University — Dept. of Mathematics
+                  </p>
+                </div>
+                <div class="exp-date">Dec 2024 – Present</div>
+              </div>
+              <p class="exp-desc">
+                Teaching computer science and mathematics courses: Object-Oriented Programming, Programming Fundamentals, Data Structures &amp; Algorithms, Algebra, Database Design, Cryptography Theory, and Advanced Programming Topics. Providing academic support and mentoring to students, and assisting in course material and lab preparation.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">OOP</span>
+                <span class="exp-tag">Cryptography</span>
+                <span class="exp-tag">Data Structures</span>
+                <span class="exp-tag">Algorithms</span>
+                <span class="exp-tag">Algebra</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="exp-item" data-aos="fade-up" data-aos-delay="80">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <article class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-title">Teaching Assistant</h3>
+                  <p class="exp-org">
+                    <i class="fas fa-university" aria-hidden="true"></i>
+                    Faculty of Science, Cairo University — Dept. of Mathematics
+                  </p>
+                </div>
+                <div class="exp-date">Mar 2015 – Nov 2024</div>
+              </div>
+              <p class="exp-desc">
+                Delivered lab sessions and taught a wide range of CS courses including Programming Principles, OOP, Java, C++, Algorithms, Data Structures, Cryptography, File Structures, Database, AI, ICDL, Discrete Math, and Computer Organization. Assisted students with coding exercises and debugging, and conducted research in cryptography and image processing.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">Java</span>
+                <span class="exp-tag">C++</span>
+                <span class="exp-tag">AI</span>
+                <span class="exp-tag">Cryptography</span>
+                <span class="exp-tag">Database</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Experience 3 -->
+          <div class="exp-item" data-aos="fade-up" data-aos-delay="160">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <article class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-title">Part-time Teaching Assistant</h3>
+                  <p class="exp-org">
+                    <i class="fas fa-university" aria-hidden="true"></i>
+                    American University in Cairo (AUC) — School of Sciences &amp; Engineering
+                  </p>
+                </div>
+                <div class="exp-date">Sep 2016 – Dec 2024</div>
+              </div>
+              <p class="exp-desc">
+                Assisted in lab sessions, graded assignments and exams, and taught courses including: Computer Networks, Fundamentals of Computing I &amp; II, Advanced Programming in Java, Object Oriented Design, Secure System Engineering, Information Security, and Fundamentals of Computing and Communication Systems.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">Computer Networks</span>
+                <span class="exp-tag">Information Security</span>
+                <span class="exp-tag">Java</span>
+                <span class="exp-tag">OOP</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Experience 4 -->
+          <div class="exp-item" data-aos="fade-up" data-aos-delay="240">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <article class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-title">Freelance Front-end Web Developer</h3>
+                  <p class="exp-org">
+                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                    Self-employed — Remote
+                  </p>
+                </div>
+                <div class="exp-date">Jun 2020 – Dec 2020</div>
+              </div>
+              <p class="exp-desc">
+                Built and styled responsive web pages using HTML, CSS, and Bootstrap. Added interactive elements such as sliders, modals, and animations using JavaScript and jQuery. Developed simple web applications using WordPress.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">HTML/CSS</span>
+                <span class="exp-tag">JavaScript</span>
+                <span class="exp-tag">jQuery</span>
+                <span class="exp-tag">Bootstrap</span>
+                <span class="exp-tag">WordPress</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Experience 5 -->
+          <div class="exp-item" data-aos="fade-up" data-aos-delay="320">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <article class="exp-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-title">Trainee</h3>
+                  <p class="exp-org">
+                    <i class="fas fa-building" aria-hidden="true"></i>
+                    National Bank of Egypt (NBE) — Giza, Egypt
+                  </p>
+                </div>
+                <div class="exp-date">Aug 2012 – Sep 2012</div>
+              </div>
+              <p class="exp-desc">
+                Supported the customer service team with basic banking operations. Answered customer inquiries about bank services and assisted customers with filling out forms and applications while learning about banking procedures.
+              </p>
+              <div class="exp-tags">
+                <span class="exp-tag">Customer Service</span>
+                <span class="exp-tag">Banking</span>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /.exp-timeline -->
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Technical Expertise</span>
+          <h2 class="section-title" id="skills-title">Skills</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+            <div class="skill-category-header">
+              <i class="fas fa-code" aria-hidden="true"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-bars" role="list" aria-label="Programming language proficiencies">
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Python</span><span class="skill-pct">95%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Python proficiency 95%">
+                  <div class="skill-fill" data-width="95"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>MATLAB</span><span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="MATLAB proficiency 88%">
+                  <div class="skill-fill" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>C/C++</span><span class="skill-pct">80%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="C/C++ proficiency 80%">
+                  <div class="skill-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Java</span><span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Java proficiency 75%">
+                  <div class="skill-fill" data-width="75"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Solidity</span><span class="skill-pct">70%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Solidity proficiency 70%">
+                  <div class="skill-fill" data-width="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI & Data Science -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="80">
+            <div class="skill-category-header">
+              <i class="fas fa-brain" aria-hidden="true"></i>
+              <h3>AI &amp; Data Science</h3>
+            </div>
+            <div class="skill-bars" role="list" aria-label="AI and data science proficiencies">
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Machine Learning</span><span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Machine Learning proficiency 92%">
+                  <div class="skill-fill" data-width="92"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Deep Learning</span><span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Deep Learning proficiency 90%">
+                  <div class="skill-fill" data-width="90"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>PyTorch / TensorFlow</span><span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="PyTorch/TensorFlow proficiency 88%">
+                  <div class="skill-fill" data-width="88"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Data Analysis</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Data Analysis proficiency 85%">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security & Cryptography -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+            <div class="skill-category-header">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <h3>Security &amp; Cryptography</h3>
+            </div>
+            <div class="skill-bars" role="list" aria-label="Security and cryptography proficiencies">
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Cryptographic Algorithms</span><span class="skill-pct">93%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Cryptographic Algorithms proficiency 93%">
+                  <div class="skill-fill" data-width="93"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Network Security</span><span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Network Security proficiency 85%">
+                  <div class="skill-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Blockchain</span><span class="skill-pct">82%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Blockchain proficiency 82%">
+                  <div class="skill-fill" data-width="82"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item" role="listitem">
+                <div class="skill-bar-label">
+                  <span>Quantum Cryptography</span><span class="skill-pct">78%</span>
+                </div>
+                <div class="skill-bar-track" aria-label="Quantum Cryptography proficiency 78%">
+                  <div class="skill-fill" data-width="78"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Infrastructure -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="80">
+            <div class="skill-category-header">
+              <i class="fas fa-tools" aria-hidden="true"></i>
+              <h3>Tools &amp; Infrastructure</h3>
+            </div>
+            <div class="skill-badges" role="list" aria-label="Tools and infrastructure">
+              <span class="skill-badge" role="listitem"><i class="fab fa-git-alt" aria-hidden="true"></i> Git</span>
+              <span class="skill-badge" role="listitem"><i class="fab fa-linux" aria-hidden="true"></i> Linux</span>
+              <span class="skill-badge" role="listitem"><i class="fab fa-docker" aria-hidden="true"></i> Docker</span>
+              <span class="skill-badge" role="listitem"><i class="fas fa-server" aria-hidden="true"></i> HPC Clusters</span>
+              <span class="skill-badge" role="listitem"><i class="fas fa-database" aria-hidden="true"></i> SQL/NoSQL</span>
+              <span class="skill-badge" role="listitem"><i class="fab fa-aws" aria-hidden="true"></i> AWS</span>
+              <span class="skill-badge" role="listitem"><i class="fas fa-network-wired" aria-hidden="true"></i> Wireshark</span>
+              <span class="skill-badge" role="listitem"><i class="fas fa-bug" aria-hidden="true"></i> Metasploit</span>
+              <span class="skill-badge" role="listitem"><i class="fas fa-file-alt" aria-hidden="true"></i> LaTeX</span>
+              <span class="skill-badge" role="listitem"><i class="fas fa-book" aria-hidden="true"></i> Jupyter</span>
+            </div>
+          </div>
+
+        </div><!-- /.skills-grid -->
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title" id="contact-title">Contact</h2>
+          <div class="section-line" aria-hidden="true"></div>
+        </div>
+
+        <p class="contact-intro" data-aos="fade-up" data-aos-delay="50">
+          I am open to research collaborations, speaking engagements, and academic partnerships. Whether you are working on a joint paper, exploring mutual research interests, or looking for a co-supervisor for your graduate work — feel free to reach out.
+        </p>
+
+        <div class="contact-grid" role="list" aria-label="Contact information">
+
+          <!-- Email -->
+          <div class="contact-card" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="contact-card-icon" aria-hidden="true">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="contact-card-title">Email</h3>
+            <a href="mailto:mesmat@sci.cu.edu.eg" class="contact-card-value">mesmat@sci.cu.edu.eg</a>
+            <div class="contact-card-action" style="position:relative;">
+              <button id="copyEmailBtn" class="btn btn-outline btn-sm" aria-label="Copy email address to clipboard">
+                <i class="fas fa-copy" aria-hidden="true"></i> Copy
+              </button>
+              <span class="copy-tooltip" id="copyTooltip" role="status" aria-live="polite">Copied!</span>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <div class="contact-card" role="listitem" data-aos="fade-up" data-aos-delay="60">
+            <div class="contact-card-icon" aria-hidden="true">
+              <i class="fab fa-github"></i>
+            </div>
+            <h3 class="contact-card-title">GitHub</h3>
+            <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" class="contact-card-value">mesmatmm</a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="contact-card" role="listitem" data-aos="fade-up" data-aos-delay="120">
+            <div class="contact-card-icon" aria-hidden="true">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <h3 class="contact-card-title">LinkedIn</h3>
+            <a href="https://linkedin.com/in/mahmoud-esmat" target="_blank" rel="noopener noreferrer" class="contact-card-value">Mahmoud Esmat</a>
+          </div>
+
+          <!-- Google Scholar -->
+          <div class="contact-card" role="listitem" data-aos="fade-up" data-aos-delay="0">
+            <div class="contact-card-icon" aria-hidden="true">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="contact-card-title">Google Scholar</h3>
+            <a href="https://scholar.google.com/citations?user=PDm7niMAAAAJ" target="_blank" rel="noopener noreferrer" class="contact-card-value">View Publications</a>
+          </div>
+
+          <!-- ORCID -->
+          <div class="contact-card" role="listitem" data-aos="fade-up" data-aos-delay="60">
+            <div class="contact-card-icon" aria-hidden="true">
+              <i class="fab fa-orcid"></i>
+            </div>
+            <h3 class="contact-card-title">ORCID</h3>
+            <a href="https://orcid.org/0009-0008-9087-0566" target="_blank" rel="noopener noreferrer" class="contact-card-value">0009-0008-9087-0566</a>
+          </div>
+
+          <!-- ResearchGate -->
+          <div class="contact-card" role="listitem" data-aos="fade-up" data-aos-delay="120">
+            <div class="contact-card-icon" aria-hidden="true">
+              <i class="fab fa-researchgate"></i>
+            </div>
+            <h3 class="contact-card-title">ResearchGate</h3>
+            <a href="https://www.researchgate.net/profile/Mahmoud-Esmat" target="_blank" rel="noopener noreferrer" class="contact-card-value">Mahmoud Esmat</a>
+          </div>
+
+        </div><!-- /.contact-grid -->
+      </div>
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; 2026 Mahmoud Esmat. All rights reserved.</p>
+      <p class="footer-built">Built with <span aria-label="love">&#10084;</span> using HTML, CSS &amp; JavaScript</p>
+      <div class="footer-social" aria-label="Social links">
+        <a href="https://github.com/mesmatmm" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://linkedin.com/in/mahmoud-esmat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=PDm7niMAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://orcid.org/0009-0008-9087-0566" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><i class="fab fa-orcid" aria-hidden="true"></i></a>
+        <a href="https://www.researchgate.net/profile/Mahmoud-Esmat" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BIBTEX MODAL ===== -->
+  <div class="modal-overlay" id="bibtexModal" role="dialog" aria-modal="true" aria-labelledby="bibtexModalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="bibtexModalTitle">BibTeX Citation</h2>
+        <button class="modal-close" id="modalClose" aria-label="Close BibTeX modal">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <pre class="bibtex-code" id="bibtexCode" aria-label="BibTeX citation code"></pre>
+      <div class="modal-actions" style="position:relative;">
+        <button class="btn btn-primary" id="copyBibtexBtn" aria-label="Copy BibTeX to clipboard">
+          <i class="fas fa-copy" aria-hidden="true"></i> Copy BibTeX
+        </button>
+        <span class="copy-tooltip" id="bibtexTooltip" role="status" aria-live="polite">Copied!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top of page" title="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- AOS Library (deferred) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+  <!-- Main Script (deferred) -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
